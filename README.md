@@ -1,6 +1,8 @@
 # 🚀 Selenium Automation Hub
 🖥️ A daily updated collection of Selenium automation scripts for mastering web automation!
 
+# Updates in master branch
+
 # <h3>🎯 About This Repository<h3>
 A dynamic repository for **Selenium automation scripts**, showcasing **daily updates**, test scenarios, and best practices.  
 Perfect for learning and refining **web testing skills** 🚀  
