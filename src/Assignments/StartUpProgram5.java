@@ -12,6 +12,6 @@ public class StartUpProgram5
 			
 			driver.get("https://app.joinsuperset.com/students/login");
 			
-//			driver.close();
+			driver.close();
 	}
 }
