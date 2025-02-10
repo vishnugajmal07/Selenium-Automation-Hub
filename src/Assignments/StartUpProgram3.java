@@ -13,6 +13,6 @@ public class StartUpProgram3
 				
 				driver.get("https://github.com/");
 				
-//				driver.close();
+				driver.close();
 		}
 }
