@@ -20,7 +20,7 @@ public class Xpath
 //			 Thread.sleep(2000);
 			 
 			 //Click on the Shopping cart btn
-			 driver.findElement(By.xpath("html/body/div[4]/div/div/div/div/ul/li[3]/a/span")).click();
+			 driver.findElement(By.xpath("/html/body/div[4]/div/div/div/div/ul/li[3]/a/span")).click();
 			 
 			 Thread.sleep(2000);
 			 
