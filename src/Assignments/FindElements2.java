@@ -11,7 +11,7 @@ public class FindElements2
 		public static void main(String[] args) throws InterruptedException 
 		{
 				String expected_title = "Demo Web Shop. Digital downloads";
-				
+				String expected_Url="https://demowebshop.tricentis.com/news/rss/1";
 				ChromeDriver driver=new ChromeDriver();
 				
 				driver.manage().window().maximize();
@@ -25,19 +25,18 @@ public class FindElements2
 				
 				if(expected_title.equals(actual_Title))
 				{
-					System.out.println("We are in Digital download page");
+					System.out.println("We are in	DWS  page");
 					
-//					List<WebElement> columnFollow_us = driver.findElements(By.xpath("//div[@class='column follow-us']/ul/li/a"));
-//					
-//					for(WebElement web:columnFollow_us)
-//					{
-//						
+					List<WebElement> columnFollow_us = driver.findElements(By.xpath("//div[@class='column follow-us']/ul/li/a"));
+					
+					for(WebElement web:columnFollow_us)
+					{
+						
 //						String	title=driver.getTitle();
 //					
 //						if(expected_title.equals(title))
 //						{
 //							web.click();
-//							System.out.println(web);
 //							Thread.sleep(2000);
 //						}
 //						else
@@ -46,23 +45,35 @@ public class FindElements2
 //							Thread.sleep(4000);
 //							
 //						}
-//						
+						
+						web.click();
+						Thread.sleep(2000);
+						
+						String actual_Url=driver.getCurrentUrl();
+						
+						if(expected_Url.equals(actual_Url))
+						{
+							driver.navigate().back();
+						}
+					}
+					
+					
 					
 					//By Using Common attribute
 					
-						List<WebElement> columnFollow_us = driver.findElements(By.xpath("//a[@target='_blank']"));
-						for(WebElement web:columnFollow_us)
-						{
-							web.click();
-							Thread.sleep(2000);
-							
-						}
+//						List<WebElement> columnFollow_us = driver.findElements(By.xpath("//a[@target='_blank']"));
+//						for(WebElement web:columnFollow_us)
+//						{
+//							web.click();
+//							Thread.sleep(2000);
+//							
+//						}
 						
 					}
 					
 				else
 				{
-					System.out.println("we are not in Digital Download Page");
+					System.out.println("we are not in DWS Page");
 				}
 				
 //				driver.close();
