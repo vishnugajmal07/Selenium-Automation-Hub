@@ -36,9 +36,9 @@ public class RemoveHighPriceProd
 				
 				for(WebElement web: totalPrices)
 				{
-					
 					list.add(web.getText());
 				}
+				
 				List<Double> l1 = new ArrayList<>();
 				
 				for (Object obj : list) {
@@ -56,6 +56,7 @@ public class RemoveHighPriceProd
 					if(l1.get(i)>max)
 					{
 						max=l1.get(i);
+						
 					}
 				}
 				
@@ -74,8 +75,6 @@ public class RemoveHighPriceProd
 				
 				
 				driver.findElement(By.xpath("//input[@name='updatecart']")).click();
-				
-				
 				
 				
 				Thread.sleep(4000);
