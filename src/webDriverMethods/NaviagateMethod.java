@@ -33,7 +33,7 @@ public class NaviagateMethod
 			 driver.navigate().forward();
 			 Thread.sleep(2000);
 			 
-			 driver.close();
+//			 driver.close();
 			 
 		}
 }

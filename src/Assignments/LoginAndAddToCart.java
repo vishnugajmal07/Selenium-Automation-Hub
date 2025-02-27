@@ -37,6 +37,7 @@ public class LoginAndAddToCart
 				Thread.sleep(2000);
 				
 				driver.navigate().to("https://demowebshop.tricentis.com/");
+				Thread.sleep(1500);
 				
 				String actual_Url=driver.getCurrentUrl();
 				
@@ -47,10 +48,15 @@ public class LoginAndAddToCart
 					
 					//Login into the DemoWebShop web page
 					driver.findElement(By.xpath("//a[@class='ico-login']")).click();
+					Thread.sleep(1500);
 					driver.findElement(By.xpath("//input[@class='email']")).sendKeys("vgpatil@gmail.com");
+					Thread.sleep(1500);
 					driver.findElement(By.xpath("//input[@class='password']")).sendKeys("vg@123");
+					Thread.sleep(1500);
 					driver.findElement(By.xpath("//input[@id='RememberMe']")).click();
+					Thread.sleep(1500);
 					driver.findElement(By.xpath("//input[@value='Log in']")).click();
+					Thread.sleep(2500);
 					
 					
 					driver.navigate().refresh();
@@ -83,7 +89,7 @@ public class LoginAndAddToCart
 					driver.findElement(By.xpath("//a[@class='ico-logout']")).click();
 					
 					Thread.sleep(5000);
-					driver.close();
+//					driver.close();
 					
 				}
 		}
