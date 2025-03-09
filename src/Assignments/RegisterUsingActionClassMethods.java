@@ -33,7 +33,7 @@ public class RegisterUsingActionClassMethods extends DwsBaseClass
 			} 
 			else 
 			{
-					System.out.println("Register is Disabled");
+				System.out.println("Register is Disabled");
 			}
 			
 			driver.quit();

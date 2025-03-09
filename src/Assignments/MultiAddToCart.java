@@ -10,6 +10,9 @@ public class MultiAddToCart
 {
 		public static void main(String[] args) throws InterruptedException 
 		{
+				String expected_Url1="https://demowebshop.tricentis.com/5-virtual-gift-card";
+				String expected_Url2="https://demowebshop.tricentis.com/25-virtual-gift-card";
+				
 				ChromeDriver driver=new ChromeDriver();
 				
 				driver.manage().window().maximize();
@@ -36,35 +39,38 @@ public class MultiAddToCart
 //					Thread.sleep(1000);
 //					driver.navigate().back();
 //				}
-				
+
 				for (int i = 0; i < elements.size(); i++)
 				{
-					if(i<=1)
+					elements.get(i).click();
+					Thread.sleep(2000);
+					
+					String actual_Url = driver.getCurrentUrl();
+				
+					if(expected_Url1.equals(actual_Url) || expected_Url2.equals(actual_Url))
 					{
-						elements.get(i).click();
-						Thread.sleep(2000);
 						
-						driver.findElement(By.xpath("(//input[@type=\"text\"])[3]")).sendKeys("Vishal");
-						driver.findElement(By.xpath("(//input[@type=\"text\"])[4]")).sendKeys("vishal@gmail.com");
-						driver.findElement(By.xpath("(//input[@type=\"text\"])[5]")).sendKeys("Vishnu");
-						driver.findElement(By.xpath("(//input[@type=\"text\"])[6]")).sendKeys("Vishnu@gmail.com");
+						driver.findElement(By.xpath("(//input[@type='text'])[3]")).sendKeys("Vishal");
+						driver.findElement(By.xpath("(//input[@type='text'])[4]")).sendKeys("vishal@gmail.com");
+						driver.findElement(By.xpath("(//input[@type='text'])[5]")).sendKeys("Vishnu");
+						driver.findElement(By.xpath("(//input[@type='text'])[6]")).sendKeys("Vishnu@gmail.com");
 						
 						driver.findElement(By.className("message")).sendKeys("Congratulations");
 						driver.findElement(By.xpath("//input[@value='Add to cart']")).click();
 						
 						Thread.sleep(1000);
 						driver.navigate().back();
+						
 					}
 					else
 					{
-						elements.get(i).click();
-						Thread.sleep(2000);
 						driver.findElement(By.xpath("(//input[@type=\"text\"])[3]")).sendKeys("Vishal");
 						driver.findElement(By.xpath("(//input[@type=\"text\"])[4]")).sendKeys("Vishnu");
 						driver.findElement(By.className("message")).sendKeys("Congratulations");
 						driver.findElement(By.xpath("//input[@value='Add to cart']")).click();
 						Thread.sleep(2000);
 						driver.navigate().back();
+						
 					}
 				}
 				

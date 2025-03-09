@@ -1,4 +1,4 @@
-package QspiderAppScripts;
+	package QspiderAppScripts;
 
 import java.util.List;
 
@@ -10,7 +10,7 @@ public class RegisterDriver  extends Register
 	public static void main(String[] args) throws InterruptedException 
 	{
 			precondition();
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			
 			List<WebElement> actions = driver.findElements(By.xpath("//p[text()='Actions']/../ul/li"));
 			 

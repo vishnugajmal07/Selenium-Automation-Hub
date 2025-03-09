@@ -16,6 +16,7 @@ public class Register
 			driver.get("https://demoapps.qspiders.com/");
 			Thread.sleep(2000);
 			driver.findElement(By.xpath("(//div[text()='Explore more'])[1]")).click();
+			Thread.sleep(2000);
 		}
 		
 		public static void register() throws InterruptedException 

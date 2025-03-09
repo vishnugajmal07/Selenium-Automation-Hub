@@ -28,6 +28,7 @@ public class RightClick
 //		act.click(copy).perform();
 		
 		Thread.sleep(2000);
+		rigtClick.click();
 		driver.quit();
 		
 	}
