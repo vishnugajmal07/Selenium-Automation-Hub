@@ -8,7 +8,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class QspidersUtilityClass 
 {
-		static WebDriver driver=null;
+		protected static WebDriver driver=null;
 		
 		public static void preCondition(String browser) throws InterruptedException
 		{
