@@ -1,7 +1,10 @@
 package Assignments;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -69,5 +72,51 @@ public class DwsBaseClass
 	public static void postCondition() 
 	{
 		driver.quit();
+	}
+	
+	
+	
+//	Gift Card option add to cart details
+	
+	public static void virtualGiftCard1_2() throws InterruptedException
+	{
+		driver.findElement(By.xpath("//input[@class='recipient-name']")).sendKeys("Viraj");
+		driver.findElement(By.xpath("//input[@class='recipient-email']")).sendKeys("viru@gmail.com");
+		driver.findElement(By.xpath("//textarea[@class='message']")).sendKeys("Congrats");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//input[@value='Add to cart'])[1]")).click();
+	}
+	
+	public static void virtualGiftCart3_4() throws InterruptedException
+	{
+		driver.findElement(By.xpath("//input[@class='recipient-name']")).sendKeys("Viraj");
+		driver.findElement(By.xpath("//textarea[@class='message']")).sendKeys("Congrats");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("(//input[@value='Add to cart'])[1]")).click();
+	}
+	
+	public static double maxPriceElementInShoppingCart(List<WebElement> pricesList)
+	{
+		// Convert the list of price elements (WebElement) into a double array 
+		 double[] priceArray=new double[pricesList.size()];
+		 int i=0;
+		 for (WebElement web : pricesList)
+		 {
+			 	priceArray[i]=Double.parseDouble(web.getText());
+			 	i++;
+		 }
+		 
+		 
+		 //Finding max element
+		 double max = Double.MIN_VALUE;
+		 for (int j = 0; j < priceArray.length; j++) 
+		 {
+			 	if(max<priceArray[j])
+			 	{
+			 		max=priceArray[j];	
+			 	}
+		 }
+		 
+		 return max;
 	}
 }

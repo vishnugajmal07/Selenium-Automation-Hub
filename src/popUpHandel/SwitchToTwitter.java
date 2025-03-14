@@ -20,6 +20,7 @@ public class SwitchToTwitter
 			String twitter_Url = "https://x.com/nopCommerce";
 			String rss_Url = "https://demowebshop.tricentis.com/news/rss/1";
 			String google_url = "https://workspaceupdates.googleblog.com/";
+			
 			WebDriver driver=new ChromeDriver();
 			driver.manage().window().maximize();
 			Thread.sleep(2000);
@@ -49,6 +50,7 @@ public class SwitchToTwitter
 			
 			
 			Set<String> child = driver.getWindowHandles();
+			
 			for (String str : child)
 			{
 				driver.switchTo().window(str);
