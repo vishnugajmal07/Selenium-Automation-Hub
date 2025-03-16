@@ -36,5 +36,8 @@ public class CalenderPopUp
 				driver.findElement(By.xpath("//img[@id='img2Nex']")).click();
 			}
 		}
+		
+		Thread.sleep(2000);
+		driver.close();
 	}
 }
