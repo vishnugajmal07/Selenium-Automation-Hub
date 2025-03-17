@@ -38,14 +38,16 @@ public class RedBusCalendarPopUp
 			{
 				try
 				{
-					driver.findElement(By.cssSelector(".DayTiles__CalendarDaysSpan-sc-1xum02u-1.dkWAbH")).click();
+					driver.findElement(By.cssSelector("//div[@class='sc-jzJRlG hrJoeL']/div/div/div/following-sibling::div[2]/div[5]/span/div[5]")).click();
 					break;
 				} 
 				catch (Exception e)
 				{
+					Thread.sleep(1000);
 					driver.findElement(By.xpath("//div[@class='sc-jzJRlG hrJoeL']/div/div/div/div[3]")).click();
 				}
 			}
+			
 			String text = driver.findElement(By.cssSelector(".sc-kAzzGY.cCrHkP")).getText();
 			System.out.println(text);
 		}

@@ -103,6 +103,8 @@ public class BrowserWindowHandel extends BrowserWindowHandelUtilityClass
 				driver.switchTo().window(pHandel);
 				
 			}
+			driver.navigate().refresh();
+			button();
 			driver.close();
 		}
 }
