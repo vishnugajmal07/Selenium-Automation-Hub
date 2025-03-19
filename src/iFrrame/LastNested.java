@@ -6,9 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LastNested {
 
-	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-
+	public static void main(String[] args) throws InterruptedException
+	{
 		
 		
 		ChromeDriver driver =new ChromeDriver();
@@ -35,7 +34,18 @@ public class LastNested {
 	   driver.findElement(By.xpath("//input[@type='email']")).sendKeys("vishnu@gmail.com");
 	   Thread.sleep(2000);
 	   
+	   driver.switchTo().parentFrame();
+	   WebElement pass = driver.findElement(By.xpath("(//div[@class='form-group'])[2]/iframe"));
+	   driver.switchTo().frame(pass);
 	   driver.findElement(By.xpath("//section[@class='eyeParent']/input")).sendKeys("Vishnu@123");
+	   driver.switchTo().parentFrame();
+	   WebElement cPass = driver.findElement(By.xpath("(//div[@class='form-group'])[3]/iframe"));
+	   driver.switchTo().frame(cPass);
+	   driver.findElement(By.xpath("//input[@id='confirm']")).sendKeys("Vishnu@123");
+	   driver.switchTo().parentFrame();
+	   WebElement submit = driver.findElement(By.xpath("//div[@class='form-group'])[4]/iframe"));
+	   driver.switchTo().frame(submit);
+	   driver.findElement(By.xpath("//input[@id='submitButton']")).click();
 	   
 	  
 	}
