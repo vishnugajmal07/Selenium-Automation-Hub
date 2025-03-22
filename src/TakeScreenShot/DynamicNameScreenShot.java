@@ -2,7 +2,7 @@ package TakeScreenShot;
 
 import java.io.File;
 import java.io.IOException;
-import java.time.Duration;
+import java.time.*;
 import java.time.LocalDate;
 
 import org.openqa.selenium.OutputType;
