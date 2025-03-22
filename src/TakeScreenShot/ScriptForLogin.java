@@ -44,6 +44,7 @@ public class ScriptForLogin
 			File from = ts.getScreenshotAs(OutputType.FILE);
 			File to=new File("D:\\Java\\login.jpg");
 			
+			
 			FileHandler.copy(from, to);
 		}
 	}
