@@ -21,5 +21,6 @@ public class ImplicitWait
 			driver.findElement(By.xpath("//button[@id='loginBtn']")).click();
 			driver.findElement(By.xpath("//span[text()='Create Account']")).click();
 			
+			
 		}
 }

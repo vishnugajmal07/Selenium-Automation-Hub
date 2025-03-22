@@ -14,7 +14,7 @@ public class BaseClass
 			
 			driver.manage().window().maximize();
 			
-			driver.get("https://demowebshop.tricentis.com/");			
+			driver.get("https://demowebshop.tricentis.com/");	
 		}
 		
 		public static void login() 
