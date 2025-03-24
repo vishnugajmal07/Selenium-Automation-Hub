@@ -24,6 +24,7 @@ public class ContinuosSelect2
 				List<WebElement> options = sel.getOptions();
 				
 				int i=0;
+				
 				for (WebElement web : options) 
 				{
 					sel.selectByIndex(i++);

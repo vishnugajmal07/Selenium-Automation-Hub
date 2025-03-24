@@ -6,10 +6,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Nested_iframe {
 
-	public static void main(String[] args) throws InterruptedException {
-		// TODO Auto-generated method stub
-
-		
+	public static void main(String[] args) throws InterruptedException 
+	{
 		
 		ChromeDriver driver =new ChromeDriver();
 		
@@ -19,11 +17,11 @@ public class Nested_iframe {
 		
 		Thread.sleep(3000);
 		
-		  WebElement first = driver.findElement(By.xpath("//div[@class='px-8 pt-8 rounded-xl ']/iframe"));
+		WebElement first = driver.findElement(By.xpath("//div[@class='px-8 pt-8 rounded-xl ']/iframe"));
 		  
-		  driver.switchTo().frame(first);
+		driver.switchTo().frame(first);
 		
-		  Thread.sleep(200);
+		Thread.sleep(200);
 		WebElement nested = driver.findElement(By.xpath("//div[@class='form_container']/iframe"));
 		
 		driver.switchTo().frame(nested);
