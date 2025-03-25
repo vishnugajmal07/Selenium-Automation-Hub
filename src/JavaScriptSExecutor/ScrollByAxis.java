@@ -1,4 +1,4 @@
-package JavaScriptSExecutor;
+ package JavaScriptSExecutor;
 
 import java.time.Duration;import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
