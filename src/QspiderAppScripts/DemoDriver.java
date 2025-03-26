@@ -11,12 +11,14 @@ public class DemoDriver extends QspidersUtilityClass
 		
 		driver.findElement(By.xpath("(//div[text()='Explore more'])[1]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//input[@placeholder='Search...']")).sendKeys("text field");
+		driver.findElement(By.xpath("//input[@placeholder='Search...']")).sendKeys("Link");
 		Thread.sleep(1000);
 		driver.findElement(By.xpath("//li[@class='relative']")).click(); 	
 		
 		Thread.sleep(2000);
-		registerWithPlaceholder();
+//		registerWithPlaceholder();
+		
+		linkeTest();
 		
 		Thread.sleep(3000);
 		driver.quit();

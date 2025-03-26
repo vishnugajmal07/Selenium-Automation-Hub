@@ -26,6 +26,5 @@ public class ExplicitWait
 			login.click();
 			WebElement createAccount = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Create Account']")));
 			createAccount.click();
-			
 		}
 }

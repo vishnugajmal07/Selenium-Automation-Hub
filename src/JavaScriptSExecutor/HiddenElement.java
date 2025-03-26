@@ -21,6 +21,7 @@ public class HiddenElement
 			
 			driver.findElement(By.linkText("Create new account")).click();
 			Thread.sleep(2000);
+			
 			WebElement custom_gender = driver.findElement(By.id("custom_gender"));
 			
 			JavascriptExecutor js=(JavascriptExecutor)driver;
